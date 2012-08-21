@@ -14,3 +14,93 @@ p.first {
     text-indent: 0;
   }
 }
+
+/* STYLE */
+body {
+	font-family: sans-serif;
+	font-family: serif;
+}
+
+/* Global */
+a {
+	text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: sans-serif;
+}
+
+/* Frontmatter */
+/*
+.frontmatter ul {
+	padding-left: 0px;
+}
+.frontmatter li {
+	list-style: none;
+	margin-bottom: 1.0em;
+}
+*/
+.frontmatter li {
+	list-style: none;
+}
+#title h1, #title h2, #title h3, #title h4, #title h5, #title h6, #title p {
+	text-align: center;
+}
+.toc-ul {
+	padding-left: 0px;
+}
+#toc-bodymatter li {
+	font-weight: bold;
+}
+#toc-bodymatter li li {
+	font-weight: normal;
+}
+#illustrations ul, #tables ul {
+	padding-left: 0px;
+}
+#epigraph blockquote p.quote {
+	font-style: italic;
+	margin: 5.0em 4.0em 0.0em 4.0em ;
+}
+#epigraph blockquote p.author {
+	text-align: right;
+	margin: 0.0em 4.0em 0.0em 4.0em ;
+}
+
+/* Backmatter */
+.backmatter ul {
+	padding-left: 0px;
+}
+.backmatter li {
+	list-style: none;
+	margin-bottom: 1.0em;
+}
+.backmatter li strong {
+	text-transform: uppercase;
+}
+
+#glossary li strong {
+	text-transform: uppercase;
+}
+#bibliography li {
+	list-style: none;
+	margin-bottom: 1.0em;
+}
+#colophon p {
+	text-align: center;
+}
+
+/* GLobal */
+.delete-me {
+	border: 1px solid #888;
+	color: #888;
+}
+#purpose {
+	font-family: sans-serif;
+	font-size: 0.8em;
+	padding: 1.0em;
+	margin-bottom: 4.0em;
+}
+#purpose p {
+	text-align: left;
+	margin: 0.5em 4.0em 0.5em 4.0em ;
+}

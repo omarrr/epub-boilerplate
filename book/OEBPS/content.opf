@@ -2,17 +2,43 @@
 <package xmlns="http://www.idpf.org/2007/opf" unique-identifier="bookid" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <metadata xmlns:opf="http://www.idpf.org/2007/opf" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
+    <!-- Specifications
+
+         Dublin Core (DC) Metadata Specification
+         See: http://dublincore.org/documents/dces/
+
+         Open Packaging Format (OPF) Specification
+         See: See: http://idpf.org/epub/20/spec/OPF_2.0.1_draft.htm
+
+         -->
+
+    <!-- REQUIRED META -->
+
+    <dc:title>[TITLE]</dc:title>
+
     <!-- ISBN -->
     <dc:identifier id="bookid" opf:scheme="ISBN">urn:isbn:[ISBN]</dc:identifier>
-    <dc:title>Title</dc:title>
-    <dc:rights>Copyright © [YEAR] [COPYRIGHT HOLDER]. All rights reserved.</dc:rights>
+    <!-- Additional identifiers are optional -->
+    <dc:identifier opf:scheme="URI">[http://domain.com/slug/]</dc:identifier>
+    <!-- UUID generator: http://www.famkruithof.net/uuid/uuidgen -->
+    <dc:identifier opf:scheme="UUID">urn:uuid:[UUID]</dc:identifier>
 
-    <!-- BISAC Subject Headings List: http://www.bisg.org/what-we-do-0-136-bisac-subject-headings-list-major-subjects.php-->
-    <dc:subject>[LIST / OF / SUBJECTS]</dc:subject>
+    <!-- DATE(s) 
+         Format: http://www.w3.org/TR/NOTE-datetime
+         -->
+    <dc:date opf:event="creation">2012</dc:date>
+    <dc:date opf:event="publication">2012-02-01</dc:date>
+    <dc:date opf:event="modification">2012-03-01</dc:date>
 
+    <!-- Language code: http://en.wikipedia.org/wiki/List_of_ISO_639-2_codes -->
+    <dc:language>en</dc:language>
+
+    <!-- END: REQUIRED META -->
+
+    <!-- OPTIONAL META -->
+
+    <!-- Creator -->
     <dc:creator opf:file-as="[LASTNAME, NAME]" opf:role="aut">[NAME LASTNAME]</dc:creator>
-
-    <dc:source>[SOURCE URL]</dc:source>
 
     <!-- List of contributors
 
@@ -39,16 +65,28 @@
     <dc:contributor opf:file-as="[LASTNAME, NAME]" opf:role="edt">[NAME LASTNAME]</dc:contributor>
     <dc:contributor opf:file-as="[LASTNAME, NAME]" opf:role="cov">[NAME LASTNAME]</dc:contributor>
 
-    <dc:publisher>[PUBLISHER NAME]</dc:publisher>
-    <dc:date opf:event="publication">2012-01-01</dc:date>
+    <!-- Subjects.
+         Ex: Library of Congress Subject Headings (LCSH): http://id.loc.gov/authorities/subjects.html 
+         -->
+    <dc:subject xmlns:opf="http://www.idpf.org/2007/opf">[Subject A]</dc:subject>
+    <dc:subject xmlns:opf="http://www.idpf.org/2007/opf">[Subject B]</dc:subject>
+    <dc:subject xmlns:opf="http://www.idpf.org/2007/opf">[Subject C]</dc:subject>
 
-    <!-- Language code: http://en.wikipedia.org/wiki/List_of_ISO_639-2_codes -->
-    <dc:language>en</dc:language>
+    <!-- "Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource." -->
+    <dc:description>[DESCRIPTION]</dc:description>
+
+    <!-- "An entity responsible for making the resource available." -->
+    <dc:publisher>[PUBLISHER NAME]</dc:publisher>
+
+    <!-- "Information about rights held in and over the resource."" -->
+    <dc:rights>Copyright © [YEAR] [COPYRIGHT HOLDER]. All rights reserved.</dc:rights>
+
+    <!-- "A related resource from which the described resource is derived." -->
+    <dc:source>[SOURCE URL]</dc:source>
+
+    <!-- END: OPTIONAL META -->
 
     <meta name="cover" content="[COVER_NAME].jpg" />
-
-    <!-- UUID generator: http://www.famkruithof.net/uuid/uuidgen -->
-    <dc:identifier opf:scheme="UUID">urn:uuid:[UUID]</dc:identifier>
 
   </metadata>
 
@@ -61,21 +99,48 @@
 
   <manifest>
     <item href="Images/cover.jpg" id="cover.jpg" media-type="image/jpeg" />
-    <item href="Text/cover.xhtml" id="cover" media-type="application/xhtml+xml" />
-    <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml" />
     <item href="Styles/style.css" id="css" media-type="text/css" />
-    <item href="Text/frontmatter.xhtml" id="frontmatter" media-type="application/xhtml+xml" />
-    <item href="Text/dedication.xhtml" id="dedication" media-type="application/xhtml+xml" />
-    <item href="Text/toc.xhtml" id="toc" media-type="application/xhtml+xml" />
-    <item href="Text/foreword.xhtml" id="foreword" media-type="application/xhtml+xml" />
-    <item href="Text/introduction.xhtml" id="introduction" media-type="application/xhtml+xml" />
-    <item href="Text/chapter01.xhtml" id="chapter-1" media-type="application/xhtml+xml" />
-    <item href="Text/chapter02.xhtml" id="chapter-2" media-type="application/xhtml+xml" />
-    <item href="Text/chapter03.xhtml" id="chapter-3" media-type="application/xhtml+xml" />
-    <item href="Text/endnotes.xhtml" id="endnotes" media-type="application/xhtml+xml" />
-    <item href="Text/acknowledgements.xhtml" id="acknowledgements" media-type="application/xhtml+xml" />
-    <item href="Images/image-01.jpg" id="image-01" media-type="image/jpeg" />
-    <item href="Images/image-02.png" id="image-02" media-type="image/png" />
+    <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml" />
+
+    <item href="Text-Frontmatter/cover.xhtml" id="cover" media-type="application/xhtml+xml" />
+    <item href="Text-Frontmatter/title.xhtml" id="title" media-type="application/xhtml+xml" />
+    <item href="Text-Frontmatter/edition.xhtml" id="edition" media-type="application/xhtml+xml" />
+    <item href="Text-Frontmatter/dedication.xhtml" id="dedication" media-type="application/xhtml+xml" />
+    <item href="Text-Frontmatter/toc.xhtml" id="toc" media-type="application/xhtml+xml" />
+    <item href="Text-Frontmatter/illustrations.xhtml" id="illustrations" media-type="application/xhtml+xml" />
+    <item href="Text-Frontmatter/tables.xhtml" id="tables" media-type="application/xhtml+xml" />
+    <item href="Text-Frontmatter/foreword.xhtml" id="foreword" media-type="application/xhtml+xml" />
+    <item href="Text-Frontmatter/preface.xhtml" id="preface" media-type="application/xhtml+xml" />
+    <item href="Text-Frontmatter/acknowledgements.xhtml" id="acknowledgements" media-type="application/xhtml+xml" />
+    <item href="Text-Frontmatter/epigraph.xhtml" id="epigraph" media-type="application/xhtml+xml" />
+
+    <item href="Text-Frontmatter/introduction.xhtml" id="introduction" media-type="application/xhtml+xml" />
+    <item href="Text-Frontmatter/prologue.xhtml" id="prologue" media-type="application/xhtml+xml" />
+
+    <item href="Text/part-1.xhtml" id="part-1" media-type="application/xhtml+xml" />
+    <item href="Text/part-2.xhtml" id="part-2" media-type="application/xhtml+xml" />
+    <item href="Text/part-3.xhtml" id="part-3" media-type="application/xhtml+xml" />
+    <item href="Text/chapter-1.xhtml" id="chapter-1" media-type="application/xhtml+xml" />
+    <item href="Text/chapter-2.xhtml" id="chapter-2" media-type="application/xhtml+xml" />
+    <item href="Text/chapter-3.xhtml" id="chapter-3" media-type="application/xhtml+xml" />
+    <item href="Text/chapter-4.xhtml" id="chapter-4" media-type="application/xhtml+xml" />
+    <item href="Text/chapter-5.xhtml" id="chapter-5" media-type="application/xhtml+xml" />
+    <item href="Text/chapter-6.xhtml" id="chapter-6" media-type="application/xhtml+xml" />
+
+
+    <item href="Text-Backmatter/epilogue.xhtml" id="epilogue" media-type="application/xhtml+xml" />
+    <item href="Text-Backmatter/afterword.xhtml" id="afterword" media-type="application/xhtml+xml" />
+    <item href="Text-Backmatter/addendum.xhtml" id="addendum" media-type="application/xhtml+xml" />
+    <item href="Text-Backmatter/endnotes.xhtml" id="endnotes" media-type="application/xhtml+xml" />
+    <item href="Text-Backmatter/glossary.xhtml" id="glossary" media-type="application/xhtml+xml" />
+    <item href="Text-Backmatter/bibliography.xhtml" id="bibliography" media-type="application/xhtml+xml" />
+    <item href="Text-Backmatter/index.xhtml" id="index" media-type="application/xhtml+xml" />
+    <item href="Text-Backmatter/colophon.xhtml" id="colophon" media-type="application/xhtml+xml" />
+
+    <item href="Images/200x200.gif" id="image-01" media-type="image/gif" />
+    <item href="Images/350x350.png" id="image-02" media-type="image/png" />
+    <item href="Images/500x500.jpg" id="image-03" media-type="image/jpeg" />
+    <item href="Images/cc-by-nc-sa.png" id="cc-by-nc-sa" media-type="image/png" />
   </manifest>
 
   <!-- SPINE (mandatory)
@@ -98,16 +163,37 @@
        -->
   <spine toc="ncx">
     <itemref idref="cover" />
-    <itemref idref="frontmatter" />
-    <itemref idref="toc" />
-    <itemref idref="foreword" />
+    <itemref idref="title" />
+    <itemref idref="edition" />
     <itemref idref="dedication" />
+    <itemref idref="toc" />
+    <itemref idref="illustrations" />
+    <itemref idref="tables" />
+    <itemref idref="foreword" />
+    <itemref idref="preface" />
+    <itemref idref="acknowledgements" />
+    <itemref idref="epigraph" />
     <itemref idref="introduction" />
+    <itemref idref="prologue" />
+
+    <itemref idref="part-1" />
     <itemref idref="chapter-1" />
     <itemref idref="chapter-2" />
+    <itemref idref="part-2" />
     <itemref idref="chapter-3" />
+    <itemref idref="chapter-4" />
+    <itemref idref="part-3" />
+    <itemref idref="chapter-5" />
+    <itemref idref="chapter-6" />
+
+    <itemref idref="epilogue" />
+    <itemref idref="afterword" />
+    <itemref idref="addendum" />
     <itemref idref="endnotes" />
-    <itemref idref="acknowledgements" />
+    <itemref idref="glossary" />
+    <itemref idref="bibliography" />
+    <itemref idref="index" />
+    <itemref idref="colophon" />
   </spine>
 
   <!-- GUIDE (optional, recommended by Apple)
@@ -120,19 +206,43 @@
 
         http://idpf.org/epub/20/spec/OPF_2.0.1_draft.htm#Section2.6
 
+        Note: Not all these sections are required in a book
+
        -->
   <guide>
-    <reference href="Text/cover.xhtml" title="Cover" type="cover" />
-    <reference href="Text/toc.xhtml" title="Table of Contents" type="toc" />
-    <reference href="Text/frontmatter.xhtml" type="copyright-page" />
-    <reference href="Text/foreword.xhtml" type="foreword" />
-    <reference href="Text/dedication.xhtml" type="dedication" />
-    <reference href="Text/introduction.xhtml" type="text" />
-    <reference href="Text/chapter01.xhtml" type="text" />
-    <reference href="Text/chapter02.xhtml" type="text" />
-    <reference href="Text/chapter03.xhtml" type="text" />
-    <reference href="Text/endnotes.xhtml" type="notes" />
-    <reference href="Text/acknowledgements.xhtml" type="acknowledgements" />
+    <reference href="Text-Frontmatter/cover.xhtml" type="cover" title="Cover" />
+
+    <reference href="Text-Frontmatter/title.xhtml" type="title-page" />
+    <reference href="Text-Frontmatter/edition.xhtml" type="copyright-page" />
+    <reference href="Text-Frontmatter/dedication.xhtml" type="dedication" />
+    <reference href="Text-Frontmatter/toc.xhtml" type="toc" title="Table of Contents" />
+    <reference href="Text-Frontmatter/illustrations.xhtml" type="loi" />
+    <reference href="Text-Frontmatter/tables.xhtml" type="lot" />
+    <reference href="Text-Frontmatter/foreword.xhtml" type="foreword" />
+    <reference href="Text-Frontmatter/preface.xhtml" type="preface" />
+    <reference href="Text-Frontmatter/acknowledgements.xhtml" type="acknowledgements" />
+    <reference href="Text-Frontmatter/epigraph.xhtml" type="epigraph" />
+    <reference href="Text-Frontmatter/introduction.xhtml" type="text" />
+    <reference href="Text-Frontmatter/prologue.xhtml" type="text" />
+
+    <reference href="Text/part-1.xhtml" type="text" />
+    <reference href="Text/chapter-1.xhtml" type="text" />
+    <reference href="Text/chapter-2.xhtml" type="text" />
+    <reference href="Text/part-2.xhtml" type="text" />
+    <reference href="Text/chapter-3.xhtml" type="text" />
+    <reference href="Text/chapter-4.xhtml" type="text" />
+    <reference href="Text/part-3.xhtml" type="text" />
+    <reference href="Text/chapter-5.xhtml" type="text" />
+    <reference href="Text/chapter-6.xhtml" type="text" />
+
+    <reference href="Text-Backmatter/epilogue.xhtml" type="text" />
+    <reference href="Text-Backmatter/afterword.xhtml" type="text" />
+    <reference href="Text-Backmatter/addendum.xhtml" type="text" />
+    <reference href="Text-Backmatter/endnotes.xhtml" type="notes" />
+    <reference href="Text-Backmatter/glossary.xhtml" type="glossary" />
+    <reference href="Text-Backmatter/bibliography.xhtml" type="bibliography" />
+    <reference href="Text-Backmatter/index.xhtml" type="index" />
+    <reference href="Text-Backmatter/colophon.xhtml" type="colophon" />
   </guide>
 
 </package>

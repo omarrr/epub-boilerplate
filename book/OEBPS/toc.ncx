@@ -9,69 +9,197 @@
     <meta content="-1" name="dtb:totalPageCount"/>
     <meta content="-1" name="dtb:maxPageNumber"/>
   </head>
+
   <docTitle>
-    <text>[BOOK'S TITLE]</text>
+    <text>[TITLE]</text>
   </docTitle>
+
   <navMap>
-    <navPoint id="navpoint1" playOrder="1">
+    <navPoint id="navpoint-cover" playOrder="1">
       <navLabel>
         <text>Cover</text>
       </navLabel>
-      <content src="Text/cover.xhtml"/>
+      <content src="Text-Frontmatter/cover.xhtml"/>
     </navPoint>
-    <navPoint id="navpoint2" playOrder="2">
+    <navPoint id="navpoint-title" playOrder="2">
       <navLabel>
-        <text>Front Matter</text>
+        <text>Title</text>
       </navLabel>
-      <content src="Text/frontmatter.xhtml"/>
+      <content src="Text-Frontmatter/title.xhtml"/>
     </navPoint>
-    <navPoint id="navpoint3" playOrder="3">
+    <navPoint id="navpoint-edition" playOrder="3">
+      <navLabel>
+        <text>Edition Notice</text>
+      </navLabel>
+      <content src="Text-Frontmatter/edition.xhtml"/>
+    </navPoint>
+    <navPoint id="navpoint-dedication" playOrder="4">
       <navLabel>
         <text>Dedication</text>
       </navLabel>
-      <content src="Text/dedication.xhtml"/>
+      <content src="Text-Frontmatter/dedication.xhtml"/>
     </navPoint>
-    <navPoint id="navpoint4" playOrder="4">
+    <navPoint id="navpoint-toc" playOrder="5">
+      <navLabel>
+        <text>Table of Contents</text>
+      </navLabel>
+      <content src="Text-Frontmatter/toc.xhtml"/>
+    </navPoint>
+    <navPoint id="navpoint-illustrations" playOrder="6">
+      <navLabel>
+        <text>List of Illustrations</text>
+      </navLabel>
+      <content src="Text-Frontmatter/illustrations.xhtml"/>
+    </navPoint>
+    <navPoint id="navpoint-tables" playOrder="7">
+      <navLabel>
+        <text>List of Tables</text>
+      </navLabel>
+      <content src="Text-Frontmatter/tables.xhtml"/>
+    </navPoint>
+    <navPoint id="navpoint-foreword" playOrder="8">
       <navLabel>
         <text>Foreword</text>
       </navLabel>
-      <content src="Text/foreword.xhtml"/>
+      <content src="Text-Frontmatter/foreword.xhtml"/>
     </navPoint>
-    <navPoint id="navpoint5" playOrder="5">
+    <navPoint id="navpoint-preface" playOrder="9">
       <navLabel>
-        <text>Introduction</text>
+        <text>Preface</text>
       </navLabel>
-      <content src="Text/introduction.xhtml"/>
+      <content src="Text-Frontmatter/preface.xhtml"/>
     </navPoint>
-    <navPoint id="navpoint6" playOrder="6">
-      <navLabel>
-        <text>Chapter 1</text>
-      </navLabel>
-      <content src="Text/chapter01.xhtml"/>
-    </navPoint>
-    <navPoint id="navpoint7" playOrder="7">
-      <navLabel>
-        <text>Chapter 2</text>
-      </navLabel>
-      <content src="Text/chapter02.xhtml"/>
-    </navPoint>
-    <navPoint id="navpoint8" playOrder="8">
-      <navLabel>
-        <text>Chapter 3</text>
-      </navLabel>
-      <content src="Text/chapter03.xhtml"/>
-    </navPoint>
-    <navPoint id="navpoint9" playOrder="9">
-      <navLabel>
-        <text>End notes</text>
-      </navLabel>
-      <content src="Text/endnotes.xhtml"/>
-    </navPoint>
-    <navPoint id="navpoint10" playOrder="10">
+    <navPoint id="navpoint-acknowledgements" playOrder="10">
       <navLabel>
         <text>Acknowledgements</text>
       </navLabel>
-      <content src="Text/acknowledgements.xhtml"/>
+      <content src="Text-Frontmatter/acknowledgements.xhtml"/>
+    </navPoint>
+    <navPoint id="navpoint-epigraph" playOrder="11">
+      <navLabel>
+        <text>Epigraph</text>
+      </navLabel>
+      <content src="Text-Frontmatter/epigraph.xhtml"/>
+    </navPoint>
+    <navPoint id="navpoint-introduction" playOrder="12">
+      <navLabel>
+        <text>Introduction</text>
+      </navLabel>
+      <content src="Text-Frontmatter/introduction.xhtml"/>
+    </navPoint>
+    <navPoint id="navpoint-prologue" playOrder="13">
+      <navLabel>
+        <text>Prologue</text>
+      </navLabel>
+      <content src="Text-Frontmatter/prologue.xhtml"/>
+    </navPoint>
+
+
+    <navPoint id="navpoint-part-1" playOrder="14">
+      <navLabel>
+        <text>Part I</text>
+      </navLabel>
+      <content src="Text/part-1.xhtml"/>
+      <navPoint id="navpoint-chapter-1" playOrder="15">
+        <navLabel>
+          <text>Chapter 1</text>
+        </navLabel>
+        <content src="Text/chapter-1.xhtml"/>
+      </navPoint>
+      <navPoint id="navpoint-chapter-2" playOrder="16">
+        <navLabel>
+          <text>Chapter 2</text>
+        </navLabel>
+        <content src="Text/chapter-2.xhtml"/>
+      </navPoint>
+    </navPoint>
+
+    <navPoint id="navpoint-part-2" playOrder="17">
+      <navLabel>
+        <text>Part II</text>
+      </navLabel>
+      <content src="Text/part-2.xhtml"/>
+      <navPoint id="navpoint-chapter03" playOrder="18">
+        <navLabel>
+          <text>Chapter 3</text>
+        </navLabel>
+        <content src="Text/chapter-3.xhtml"/>
+      </navPoint>
+      <navPoint id="navpoint-chapter-4" playOrder="19">
+        <navLabel>
+          <text>Chapter 4</text>
+        </navLabel>
+        <content src="Text/chapter-4.xhtml"/>
+      </navPoint>
+    </navPoint>
+
+    <navPoint id="navpoint-part-3" playOrder="20">
+      <navLabel>
+        <text>Part III</text>
+      </navLabel>
+      <content src="Text/part-3.xhtml"/>
+      <navPoint id="navpoint-chapter-5" playOrder="21">
+        <navLabel>
+          <text>Chapter 5</text>
+        </navLabel>
+        <content src="Text/chapter-5.xhtml"/>
+      </navPoint>
+      <navPoint id="navpoint-chapter-6" playOrder="22">
+        <navLabel>
+          <text>Chapter 6</text>
+        </navLabel>
+        <content src="Text/chapter-6.xhtml"/>
+      </navPoint>
+    </navPoint>
+
+
+    <navPoint id="navpoint-epilogue" playOrder="23">
+      <navLabel>
+        <text>Epilogue</text>
+      </navLabel>
+      <content src="Text-Backmatter/epilogue.xhtml"/>
+    </navPoint>
+    <navPoint id="navpoint-afterword" playOrder="24">
+      <navLabel>
+        <text>Afterword</text>
+      </navLabel>
+      <content src="Text-Backmatter/afterword.xhtml"/>
+    </navPoint>
+    <navPoint id="navpoint-addendum" playOrder="25">
+      <navLabel>
+        <text>Addendum</text>
+      </navLabel>
+      <content src="Text-Backmatter/addendum.xhtml"/>
+    </navPoint>
+    <navPoint id="navpoint-endnotes" playOrder="26">
+      <navLabel>
+        <text>End notes</text>
+      </navLabel>
+      <content src="Text-Backmatter/endnotes.xhtml"/>
+    </navPoint>
+    <navPoint id="navpoint-glossary" playOrder="27">
+      <navLabel>
+        <text>Glossary</text>
+      </navLabel>
+      <content src="Text-Backmatter/glossary.xhtml"/>
+    </navPoint>
+    <navPoint id="navpoint-bibliography" playOrder="28">
+      <navLabel>
+        <text>Bibliography</text>
+      </navLabel>
+      <content src="Text-Backmatter/bibliography.xhtml"/>
+    </navPoint>
+    <navPoint id="navpoint-index" playOrder="29">
+      <navLabel>
+        <text>Index</text>
+      </navLabel>
+      <content src="Text-Backmatter/index.xhtml"/>
+    </navPoint>
+    <navPoint id="navpoint-colophon" playOrder="30">
+      <navLabel>
+        <text>Colophon</text>
+      </navLabel>
+      <content src="Text-Backmatter/colophon.xhtml"/>
     </navPoint>
   </navMap>
 </ncx>

@@ -53,7 +53,7 @@ Not all books require every section and in some cases some sections can be merge
 
         $ git clone git@github.com:javierarce/epub-boilerplate.git
 
-2. Edit the contents of the **book** directory.
+2. Edit the contents of the `book` directory.
 
 3. Run the publish script to generate and validate the book:
 
